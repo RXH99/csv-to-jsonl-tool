@@ -1,0 +1,20 @@
+diff --git a/math_utils.py b/math_utils.py
+index 7dc0d48..e815564 100644
+--- a/math_utils.py
++++ b/math_utils.py
+@@ -2,4 +2,12 @@ def add(a, b):
+     return a + b
+ 
+ def multiply(a, b):
+-    return a * b
+\ No newline at end of file
++    return a * b
++
++Add-Content -Path math_utils.py -Value @"
++
++def divide(a, b):
++    if b == 0:
++        raise ValueError("Cannot divide by zero")
++    return a / b
++"@
+\ No newline at end of file
